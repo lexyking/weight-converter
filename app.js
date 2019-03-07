@@ -3,12 +3,12 @@
 var e = document.querySelector(".unitToConvert"); 
 //var strUser = e.options[e.selectedIndex].value
 console.log(e);
-  e.addEventListener("change", optionValue);
+  e.addEventListener("change", doConversion);
  
 
- function optionValue(){
-
- 	switch (document.querySelector(".unitToConvert").value) {
+ function doConversion(){
+ 	var measurement = document.querySelector(".unitToConvert").value;
+ 	switch (measurement) {
  		case "Area": 
  		console.log("tonnes");
  		break;
@@ -30,7 +30,7 @@ console.log(e);
  		break;
 
  		case "Temperature":
- 		console.log("Joule");
+ 		console.log("Temperature");
  		break;
 
  		case "Time": 
