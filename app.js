@@ -2,11 +2,31 @@
 /////////Selection of entity
 var e = document.querySelector(".unitToConvert"); 
 //var strUser = e.options[e.selectedIndex].value
-console.log(e);
+// console.log(e);
   e.addEventListener("change", doConversion);
-const temperatureUnits = ["celsius", "fahrenheit", "kelvin"];
+const temperatureUnits = ["Celsius", "Fahrenheit", "Kelvin"];
+const lengthUnits = ["Meter", "Centimeter", "Millimeters", "Yard"];
 
  function doConversion(){
+
+ 	function changeUnits(unitArray){
+ 			var oldSel= document.querySelector("#unitSelect");
+ 		 oldSel.remove();
+ 		var select=document.createElement("select");
+ 		select.setAttribute("id", "unitSelect");
+ 		document.querySelector("#unitSelectionDiv").appendChild(select);
+
+ 		function addOption(val){
+	 		var option = document.createElement(`option`);
+	 		option.setAttribute("value", val);
+	 		option.innerHTML= val
+	 		select.appendChild(option);
+	 	}
+
+	 	unitArray.forEach(unitName => addOption(unitName))
+
+ 		}
+
  	var measurement = document.querySelector(".unitToConvert").value;
  	switch (measurement) {
  		case "Area": 
@@ -18,8 +38,8 @@ const temperatureUnits = ["celsius", "fahrenheit", "kelvin"];
  		break;
 
  		case "Length": 
- 		console.log("tonnes");
- 		break;
+ 		 		 changeUnits(lengthUnits);
+		break;
 
  		case "Mass":
  		console.log("Joule");
@@ -30,36 +50,10 @@ const temperatureUnits = ["celsius", "fahrenheit", "kelvin"];
  		break;
 
  		case "Temperature":
- 		var select=document.createElement("select");
- 		document.querySelector("#unitSelectionDiv").appendChild(select);
-
-
- 		function addOption(val){
-	 		var option = document.createElement(`option`);
-	 		option.setAttribute("value", val);
-	 		option.innerHTML= val
-	 		select.appendChild(option);
-	 	}
-
- 		addOption("celsius");
- 		addOption("kelvin");
- 		addOption("fahrenheit");
-
- 		// var option = document.createElement(`option`);
- 		// option.setAttribute("value", "celsius");
- 		// option.innerHTML="celsius"
- 		// select.appendChild(option);
-
- 		// var option = document.createElement(`option`);
- 		// option.setAttribute("value", "fahrenheit");
- 		// option.innerHTML="fahrenheit"
- 		// select.appendChild(option);
-
- 		// var option = document.createElement(`option`);
- 		// option.setAttribute("value", "kelvin");
- 		// option.innerHTML="kelvin"
- 		// select.appendChild(option);
-
+ 		
+ 		 
+ 		 changeUnits(temperatureUnits);
+ 		
  		
 
  		break;
