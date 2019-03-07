@@ -1,0 +1,96 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+}
+
+html, body{
+	font-family: helvetica, chill, arial, sans-serif;
+	background: #50514F;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 60%;
+	margin: 50px auto;
+	border: 1px solid #AA998F;
+}
+
+h1{
+	color: #50514F;
+	font-size: 45px;
+	font-weight: lighter;
+	flex: 1;
+	background: #AA998F;
+	
+}
+
+#headBlock{
+	display: flex;
+	width: 80%;
+	margin: 0 auto 10px auto;
+
+
+	/*border: 1px solid #AA998F;*/
+}
+
+.unitToConvertDiv{
+	flex: 50%;
+	margin-right: 4px;
+}
+
+.unitSelectionDiv{
+	flex: 50%;
+	margin-left: 4px;
+	
+}
+.inputValue{
+	width: 80%;
+	margin: auto;
+	
+
+}
+
+
+input, select{
+	font-size: 15px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.conversionUnit{
+	margin-top: 10px;
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	
+
+}
+
+.blocUnit{
+	flex: 1;
+	border: 1px solid #AA998F;
+	text-align: left;
+	margin: 0 0 10px 0;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.textOutput{
+	font-size: 25px;
+	font-family: chiller;
+}
+
+.blocUnit:nth-child(2n+1){
+	background: #D1BE9C;
+
+}
+.blocUnit:nth-child(2n){
+	background: #AA998F;
+
+}
+

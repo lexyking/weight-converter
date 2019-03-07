@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weight Converter</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+</head>
+<body>
+	<div class="container">
+		
+		<h1>Weight Converter</h1>
+		
+		<div id="headBlock">
+			<div class="unitToConvertDiv">
+				<select class="unitToConvert">
+					<option >Area</option>
+					<option >Energy</option>
+					<option >Length</option>
+					<option >Mass</option>
+					<option >Speed</option>
+					<option >Temperature</option>
+					<option >Time</option>
+					<option >Volume</option>
+				</select>
+			</div>
+
+
+
+			<div class="unitSelectionDiv">
+				<select class="unitSelection">
+					<option value="tonnes">Tonnes</option>
+					<option value="kilograms">Kilograms</option>
+					<option value="grams">Grams</option>
+					<option value="milligrams">Milligrams</option>
+					<option value="microgram">Microgram</option>
+					<option value="imperial">Imperial</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="inputValue">
+			<input type="text" placeholder="Value in pounds...">
+		</div>
+
+		<div class="conversionUnit">
+			<div class="blocUnit">
+				<h4>Tonnes</h4>
+				<div id="tonnes" class="textOutput">0</div>
+			</div>
+			<div class="blocUnit">
+				<h4>Kilograms</h4>
+				<div id="kilograms" class="textOutput">0</div>
+			</div>
+			<div class="blocUnit">
+				<h4>Grams</h4>
+				<div id="grams" class="textOutput">0</div>
+			</div>
+			<div class="blocUnit">
+				<h4>Milligrams</h4>
+				<div id="milligrams" class="textOutput">0</div>
+			</div>
+			<div class="blocUnit">
+				<h4>Micrograms</h4>
+				<div id="microgram" class="textOutput">0</div>
+			</div>
+			<div class="blocUnit">
+				<h4>Imperial Ton</h4>
+				<div id="imperial" class="textOutput">0</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
