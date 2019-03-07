@@ -4,7 +4,7 @@ var e = document.querySelector(".unitToConvert");
 //var strUser = e.options[e.selectedIndex].value
 console.log(e);
   e.addEventListener("change", doConversion);
- 
+const temperatureUnits = ["celsius", "fahrenheit", "kelvin"];
 
  function doConversion(){
  	var measurement = document.querySelector(".unitToConvert").value;
@@ -30,7 +30,38 @@ console.log(e);
  		break;
 
  		case "Temperature":
- 		console.log("Temperature");
+ 		var select=document.createElement("select");
+ 		document.querySelector("#unitSelectionDiv").appendChild(select);
+
+
+ 		function addOption(val){
+	 		var option = document.createElement(`option`);
+	 		option.setAttribute("value", val);
+	 		option.innerHTML= val
+	 		select.appendChild(option);
+	 	}
+
+ 		addOption("celsius");
+ 		addOption("kelvin");
+ 		addOption("fahrenheit");
+
+ 		// var option = document.createElement(`option`);
+ 		// option.setAttribute("value", "celsius");
+ 		// option.innerHTML="celsius"
+ 		// select.appendChild(option);
+
+ 		// var option = document.createElement(`option`);
+ 		// option.setAttribute("value", "fahrenheit");
+ 		// option.innerHTML="fahrenheit"
+ 		// select.appendChild(option);
+
+ 		// var option = document.createElement(`option`);
+ 		// option.setAttribute("value", "kelvin");
+ 		// option.innerHTML="kelvin"
+ 		// select.appendChild(option);
+
+ 		
+
  		break;
 
  		case "Time": 
